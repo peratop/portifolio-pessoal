@@ -1,0 +1,7 @@
+# Robots.txt - Leonardo Pereira Portfolio
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://ais-pre-4e4ppbul3d7spv4ed3bzvm-36384373464.us-east1.run.app/maps.xml
+Sitemap: https://ais-pre-4e4ppbul3d7spv4ed3bzvm-36384373464.us-east1.run.app/sitemap.xml
