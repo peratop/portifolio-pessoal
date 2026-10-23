@@ -46,7 +46,7 @@ export const PROJECTS: Project[] = [
     fullDescription:
       'Desenvolvida para o ateliê Joana Cortinas Sob Medida, esta aplicação foca na conversão qualificada de orçamentos e apresentação impecável de portfólio. Construída com TypeScript e Vite para carregamento ultrarrápido, traz design refinado, acolhedor e responsivo. Conta com integração ao Firebase com banco de dados noSQL para persistência de dados e gatilhos diretos para atendimento personalizado via WhatsApp. O problema enfrentado aqui, foi justamente a modernidade, a Joana sempre trabalhou com o marketing boca-a-boca, e mesmo com uma qualidade excepcional isso pode deixar um trabalhador exímio afetado pela modernidade, então além de ser bonito ainda tem de ser intuitivo para os clientes em potencial e clientes antigos!',
     techStack: ['TypeScript', 'Vite', 'React', 'Firebase', 'Banco NoSQL', 'Tailwind CSS'],
-    image: '/project_joana_cortinas_1792020530318.jpg',
+    image: '/project_joana_cortinas_1792020530318.webp',
     demoUrl: 'https://joana-cortinas-sobmedida.vercel.app',
     repoUrl: 'https://github.com/peratop/JoanaLandingPage',
     technicalHighlights: [
@@ -74,7 +74,7 @@ export const PROJECTS: Project[] = [
     fullDescription:
       'A plataforma Yeezus foi projetada para consultoria financeira, acompanhamento patrimonial e simulação de investimentos. No frontend, utiliza a mesma base ágil de TypeScript com Vite e Tailwind CSS, proporcionando uma experiência dark mode arrojada e imersiva. No backend, adota uma arquitetura em Java integrada a um banco de dados relacional estruturado em MySQL para controle estrito de transações e cálculos complexos de rentabilidade. (Projeto corporativo privado sem demonstração pública rodando).',
     techStack: ['TypeScript', 'Vite', 'React', 'Java', 'MySQL (Banco Estruturado)', 'Tailwind CSS'],
-    image: '/project_yeezus_finance_1792020531045.jpg',
+    image: '/project_yeezus_finance_1792020531045.webp',
     repoUrl: 'https://github.com/peratop',
     technicalHighlights: [
       'Frontend reativo com yeBOT, central de relatórios, simulador de investimentos e controle de planejamento.',
@@ -101,7 +101,7 @@ export const PROJECTS: Project[] = [
     fullDescription:
       'Projeto de design gráfico e branding corporativo publicado no Behance para a Host Company. Desenvolvido no Adobe Illustrator para concepção geométrica e vetorização precisa da marca e símbolos, e no Adobe Photoshop para composições de apresentação e mockups de papelaria institucional (cartões de visita, envelopes e papéis timbrados). Uma identidade limpa, moderna e memorável.',
     techStack: ['Adobe Illustrator', 'Adobe Photoshop', 'Design Gráfico', 'Branding', 'Identidade Visual'],
-    image: '/project_host_company_1792020530378.jpg',
+    image: '/project_host_company_1792020530378.webp',
     demoUrl: 'https://www.behance.net/gallery/124326251/Host-Company',
     repoUrl: 'https://www.behance.net/gallery/124326251/Host-Company',
     behanceUrl: 'https://www.behance.net/gallery/124326251/Host-Company',

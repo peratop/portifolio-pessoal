@@ -143,7 +143,7 @@ export const About: React.FC<AboutProps> = ({ onOpenResume }) => {
         {/* Wide Studio Portrait Showcase (Square) */}
         <div className="relative rounded-none overflow-hidden bg-zinc-900 border border-zinc-800 mb-28 shadow-2xl">
           <img
-            src="/hero_developer_portrait_1791933675872.jpg"
+            src="/hero_developer_portrait_1791933675872.webp"
             alt="Leonardo Pereira - Espaço de trabalho e colaboração digital"
             referrerPolicy="no-referrer"
             className="w-full h-[340px] sm:h-[440px] md:h-[500px] object-cover object-center"

@@ -87,6 +87,8 @@ export const ProjectsView: React.FC<ProjectsViewProps> = ({ onNavigate }) => {
                       src={project.image}
                       alt={project.title}
                       referrerPolicy="no-referrer"
+                      loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
 

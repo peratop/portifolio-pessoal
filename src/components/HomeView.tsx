@@ -97,9 +97,10 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate, onOpenResume }) 
               <div className="relative w-full max-w-md lg:max-w-none">
                 <div className="relative rounded-none overflow-hidden bg-zinc-900 border border-zinc-800 shadow-2xl group">
                   <img
-                    src="/hero_developer_portrait_1791933675872.jpg"
+                    src="/hero_developer_portrait_1791933675872.webp"
                     alt="Leonardo Pereira - Desenvolvedor Full-Stack"
                     referrerPolicy="no-referrer"
+                    fetchPriority="high"
                     className="w-full h-[460px] sm:h-[520px] lg:h-[560px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />

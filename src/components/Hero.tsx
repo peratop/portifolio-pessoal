@@ -107,7 +107,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact, onOpenResume }) => {
             <div className="relative w-full max-w-md lg:max-w-none">
               <div className="relative rounded-none overflow-hidden bg-zinc-900 border border-zinc-800 shadow-2xl group">
                 <img
-                  src="/hero_developer_portrait_1791933675872.jpg"
+                  src="/hero_developer_portrait_1791933675872.webp"
                   alt="Leonardo Pereira - Desenvolvedor Frontend e Backend"
                   referrerPolicy="no-referrer"
                   className="w-full h-[480px] sm:h-[540px] lg:h-[580px] object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]"

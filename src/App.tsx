@@ -1,11 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React, { lazy, Suspense, useState, useEffect } from 'react';
 import { Header, PageId } from './components/Header';
 import { HomeView } from './components/HomeView';
-import { ProjectsView } from './components/ProjectsView';
-import { CapabilitiesView } from './components/CapabilitiesView';
-import { ContactView } from './components/ContactView';
-import { ResumeModal } from './components/ResumeModal';
 import { Footer } from './components/Footer';
+
+const ProjectsView = lazy(() =>
+  import('./components/ProjectsView').then(({ ProjectsView }) => ({ default: ProjectsView }))
+);
+const CapabilitiesView = lazy(() =>
+  import('./components/CapabilitiesView').then(({ CapabilitiesView }) => ({ default: CapabilitiesView }))
+);
+const ContactView = lazy(() =>
+  import('./components/ContactView').then(({ ContactView }) => ({ default: ContactView }))
+);
+const ResumeModal = lazy(() =>
+  import('./components/ResumeModal').then(({ ResumeModal }) => ({ default: ResumeModal }))
+);
+
 export default function App() {
   const [currentPage, setCurrentPage] = useState<PageId>('home');
   const [resumeOpen, setResumeOpen] = useState(false);
@@ -44,41 +54,53 @@ export default function App() {
 
       {/* Page Routing Views */}
       <main className="relative z-10 min-h-[calc(100vh-200px)]">
-        {currentPage === 'home' && (
-          <HomeView
-            onNavigate={handleNavigate}
-            onOpenResume={() => setResumeOpen(true)}
-          />
-        )}
+        <Suspense
+          fallback={
+            <div className="flex min-h-[calc(100vh-200px)] items-center justify-center text-sm text-zinc-400" role="status">
+              Carregando página...
+            </div>
+          }
+        >
+          {currentPage === 'home' && (
+            <HomeView
+              onNavigate={handleNavigate}
+              onOpenResume={() => setResumeOpen(true)}
+            />
+          )}
 
-        {currentPage === 'projects' && (
-          <ProjectsView
-            onNavigate={handleNavigate}
-          />
-        )}
+          {currentPage === 'projects' && (
+            <ProjectsView
+              onNavigate={handleNavigate}
+            />
+          )}
 
-        {currentPage === 'capabilities' && (
-          <CapabilitiesView
-            onNavigate={handleNavigate}
-          />
-        )}
+          {currentPage === 'capabilities' && (
+            <CapabilitiesView
+              onNavigate={handleNavigate}
+            />
+          )}
 
-        {currentPage === 'contact' && (
-          <ContactView
-            onNavigate={handleNavigate}
-            onOpenResume={() => setResumeOpen(true)}
-          />
-        )}
+          {currentPage === 'contact' && (
+            <ContactView
+              onNavigate={handleNavigate}
+              onOpenResume={() => setResumeOpen(true)}
+            />
+          )}
+        </Suspense>
       </main>
 
       {/* Footer */}
       <Footer onNavigate={handleNavigate} />
 
       {/* Interactive Resume Modal */}
-      <ResumeModal
-        isOpen={resumeOpen}
-        onClose={() => setResumeOpen(false)}
-      />
+      <Suspense fallback={null}>
+        {resumeOpen && (
+          <ResumeModal
+            isOpen={resumeOpen}
+            onClose={() => setResumeOpen(false)}
+          />
+        )}
+      </Suspense>
     </div>
   );
 }
